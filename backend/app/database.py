@@ -101,7 +101,7 @@ def save_prediction(data: dict, career: str, confidence: float):
 def get_prediction_history():
 
     connection = get_connection()
-    cursor = connection.cursor()
+    cursor = connection.cursor(pymysql.cursors.DictCursor)
 
     query = """
     SELECT *
@@ -122,3 +122,34 @@ def get_prediction_history():
         connection.close()
 
     return history
+
+
+
+def delete_prediction(prediction_id):
+
+    connection = get_connection()
+    cursor = connection.cursor()
+
+    query = """
+    DELETE FROM prediction_history
+    WHERE id = %s
+    """
+
+    try:
+
+        cursor.execute(query, (prediction_id,))
+        connection.commit()
+
+        return cursor.rowcount > 0
+
+    except Exception as e:
+
+        print(e)
+        connection.rollback()
+
+        return False
+
+    finally:
+
+        cursor.close()
+        connection.close()

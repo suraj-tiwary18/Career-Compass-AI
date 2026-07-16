@@ -1,0 +1,119 @@
+.predict-page{
+
+    width:90%;
+
+    max-width:800px;
+
+    margin:40px auto;
+}
+
+.predict-page h1{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#0f172a;
+}
+
+.prediction-form{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.prediction-form input,
+.prediction-form select{
+
+    padding:14px;
+
+    border:1px solid #dbe4f3;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    outline:none;
+}
+
+.prediction-form input:focus,
+.prediction-form select:focus{
+
+    border:1px solid #2563eb;
+}
+
+.prediction-form button{
+
+    grid-column:span 2;
+
+    padding:16px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.prediction-form button:hover{
+
+    background:#1d4ed8;
+}
+
+
+.result-card{
+
+    margin-top:30px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.result-card h2{
+
+    color:#16a34a;
+
+    margin-bottom:15px;
+}
+
+.result-card h3{
+
+    font-size:34px;
+
+    color:#2563eb;
+}
+
+.result-card p{
+
+    margin-top:15px;
+
+    font-size:20px;
+
+    color:#334155;
+}

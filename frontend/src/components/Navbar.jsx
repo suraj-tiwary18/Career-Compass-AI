@@ -5,20 +5,28 @@ function Navbar() {
     <nav className="navbar">
 
       <div className="logo">
-        Career Compass AI
+       🧭 Career Compass AI
       </div>
 
-      <div className="nav-links">
+      <ul className="nav-links">
 
-        <NavLink to="/">Home</NavLink>
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
 
-        <NavLink to="/predict">Predict</NavLink>
+        <li>
+          <NavLink to="/predict">Predict</NavLink>
+        </li>
 
-        <NavLink to="/history">History</NavLink>
+        <li>
+          <NavLink to="/history">History</NavLink>
+        </li>
 
-        <NavLink to="/about">About</NavLink>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
 
-      </div>
+      </ul>
 
     </nav>
   );

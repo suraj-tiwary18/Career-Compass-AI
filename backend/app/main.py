@@ -3,12 +3,25 @@ from fastapi import FastAPI, HTTPException
 from app.schemas import StudentData
 from app.predict import predict_career
 
-from app.database import save_prediction, get_prediction_history
+from app.database import save_prediction, get_prediction_history, delete_prediction
+
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="Career Compass AI API",
     description="ML-based Career Recommendation System",
     version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Root Endpoint
@@ -52,3 +65,18 @@ def predict(student: StudentData):
 def history():
 
     return get_prediction_history()
+
+
+# Delete Prediction
+@app.delete("/history/{prediction_id}")
+def delete_history(prediction_id: int):
+
+    if delete_prediction(prediction_id):
+        return {
+            "message": "Deleted Successfully"
+        }
+
+    raise HTTPException(
+        status_code=404,
+        detail="Prediction Not Found"
+    )

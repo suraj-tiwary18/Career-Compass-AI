@@ -3,16 +3,26 @@
 @import url("./home.css");
 @import url("./predict.css");
 @import url("./history.css");
+@import url("./about.css");
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
 }
 
 body{
-
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:#f4f7fb;
+    background:linear-gradient(135deg,#eef4ff,#ffffff,#f5f7ff);
+    color:#1e293b;
 }
+
+a{
+    text-decoration:none;
+}
+
+button{
+    transition:.3s;
+}
+
+
