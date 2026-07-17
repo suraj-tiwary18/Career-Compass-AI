@@ -1,99 +1,147 @@
-# 🧭 Career Compass AI
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![React](https://img.shields.io/badge/React-Frontend-blue)
+![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![Render](https://img.shields.io/badge/Render-Backend-purple)
+![Vercel](https://img.shields.io/badge/Vercel-Frontend-black)
+![Railway](https://img.shields.io/badge/Railway-CloudDB-7B3FE4)
 
-An AI-powered Career Recommendation System that helps students identify the most suitable career path based on their academic performance, technical skills, projects, internships, certifications, and aptitude using Machine Learning.
+# 🎯 Career Compass AI
+
+An AI-powered Career Recommendation System that predicts the most suitable career path for students based on their academic profile and skills. The project is built using Machine Learning, FastAPI, React, and MySQL, and is fully deployed on the cloud.
 
 ---
 
-## 🚀 Features
+## 🚀 Live Demo
 
-- 🤖 AI-Based Career Recommendation
-- 📊 Machine Learning Model (~97% Accuracy)
-- ⚡ FastAPI REST API
-- ⚛️ React Frontend
-- 🗄️ MySQL Database Integration
+### 🌐 Frontend
+https://career-compass-ai-beta.vercel.app
+
+### ⚙️ Backend API
+https://career-compass-ai-ktqf.onrender.com
+
+### 💻 GitHub Repository
+https://github.com/suraj-tiwary18/Career-Compass-AI
+
+---
+
+# 📌 Features
+
+- 🤖 AI-based Career Prediction
+- 📊 Machine Learning Model
+- ⚡ FastAPI Backend
+- 🎨 React + Vite Frontend
+- 🗄️ MySQL Database
+- ☁️ Railway Cloud Database
 - 📜 Prediction History
-- 🗑️ Delete Individual Prediction History
-- 📱 Responsive User Interface
+- 🗑️ Delete Individual History Records
+- 📱 Responsive UI
+- 🐳 Docker Containerization
+- 🌍 Cloud Deployment
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
-### Frontend
-- React.js
-- React Router
+## Frontend
+- React
+- Vite
 - Axios
 - CSS
-- Lucide React
 
-### Backend
+## Backend
 - FastAPI
 - Python
-- PyMySQL
+- Uvicorn
 - Pydantic
 
-### Machine Learning
-- Scikit-Learn
+## Machine Learning
+- Scikit-learn
 - Pandas
 - NumPy
 - Joblib
-- Matplotlib
 
-### Database
+## Database
 - MySQL
+- Railway MySQL
+
+## Deployment
+- Vercel
+- Render
+- Railway
+
+## Containerization
+- Docker
+- Docker Compose
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-```
+```text
 Career Compass AI
 │
-├── artifacts/
 ├── backend/
 │   ├── app/
-│   ├── main.py
-│   └── requirements.txt
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── .env
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── Dockerfile
+│   └── package.json
+│
+├── artifacts/
+│   ├── career_model.pkl
+│   └── scaler.pkl
 │
 ├── dataset/
-├── frontend/
-├── graphs/
-├── ml/
-├── requirements.txt
-└── README.md
+│
+├── docker-compose.yml
+├── README.md
+└── requirements.txt
 ```
 
 ---
 
-## ⚙️ Installation
+# ⚙️ Installation
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/suraj-tiwary18/Career-Compass-AI.git
-```
 
-### Move into Project
-
-```bash
 cd Career-Compass-AI
 ```
 
-### Install Dependencies
+---
 
-```bash
-pip install -r requirements.txt
-```
-
-### Backend
+# Backend Setup
 
 ```bash
 cd backend
 
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
 uvicorn app.main:app --reload
 ```
 
-### Frontend
+Backend runs on:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+# Frontend Setup
 
 ```bash
 cd frontend
@@ -103,17 +151,43 @@ npm install
 npm run dev
 ```
 
+Frontend runs on:
+
+```
+http://localhost:5173
+```
+
 ---
 
-## 🌐 API Endpoints
+# 🐳 Docker Setup
 
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| GET | `/` | Home |
-| GET | `/health` | Health Check |
-| POST | `/predict` | Predict Career |
-| GET | `/history` | Prediction History |
-| DELETE | `/history/{id}` | Delete Prediction |
+Build and run the application using Docker Compose.
+
+```bash
+docker compose up --build
+```
+
+Stop containers:
+
+```bash
+docker compose down
+```
+
+---
+
+# 🌐 Deployment
+
+## Frontend
+
+- Vercel
+
+## Backend
+
+- Render
+
+## Database
+
+- Railway MySQL
 
 ---
 
@@ -141,25 +215,76 @@ npm run dev
 
 ---
 
-## 🎯 Future Improvements
+# 📊 Machine Learning Workflow
 
-- Docker Support
-- Cloud Deployment
-- Authentication
-- Career Roadmap Suggestions
-- Resume Analyzer
-- Multiple ML Models
-- PDF Report Generation
+Dataset
+
+↓
+
+Data Preprocessing
+
+↓
+
+Feature Engineering
+
+↓
+
+Model Training
+
+↓
+
+Model Evaluation
+
+↓
+
+Model Serialization (Joblib)
+
+↓
+
+FastAPI Backend
+
+↓
+
+React Frontend
+
+↓
+
+Prediction
+
+↓
+
+Store Prediction History
 
 ---
 
-## 👨‍💻 Author
+# 📈 Future Enhancements
+
+- User Authentication
+- Career Roadmap Recommendation
+- Resume Analysis
+- Skill Gap Detection
+- Course Recommendation
+- Dashboard Analytics
+- Email Report Generation
+
+---
+
+# 👨‍💻 Author
 
 **Suraj Kumar Tiwari**
 
+B.Tech Computer Science Engineering
+
+Arya College of Engineering, Jaipur
+
+GitHub:
 - GitHub: https://github.com/suraj-tiwary18
+
+LinkedIn:
 - LinkedIn: https://www.linkedin.com/in/suraj-tiwari-580984332/
 
 ---
 
-⭐ If you like this project, don't forget to star the repository.
+# ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
